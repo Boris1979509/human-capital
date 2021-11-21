@@ -1,0 +1,34 @@
+image: registry.gitlab.com/rosatom/core/docker/deployer
+
+variables:
+  DOCKER_DRIVER: overlay2
+  GIT_STRATEGY: clone
+  GIT_DEPTH: 10
+
+before_script:
+  - mkdir ~/.ssh && chmod 700 ~/.ssh
+  - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+  - eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa
+
+after_script:
+  - rm ~/.ssh/id_rsa
+
+stages:
+  - staging
+  - production
+
+deploy_develop:
+  stage: staging
+  script:
+    - ssh -o StrictHostKeyChecking=no deployer@api.hcap.d.rusatom.dev uptime
+    - dep deploy develop
+  only:
+    - develop
+
+deploy_production:
+  stage: production
+  script:
+    - ssh -o StrictHostKeyChecking=no deployer@api.hcap.rusatom.dev uptime
+    - dep deploy production
+  only:
+    - master

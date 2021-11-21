@@ -1,0 +1,81 @@
+version: '3.4'
+volumes:
+  redis-data:
+  postgresql-data:
+  elasticsearch-data:
+services:
+  nginx:
+    container_name: 'hcap-nginx'
+    image: nginx:alpine
+    volumes:
+      - ./docker/nginx:/etc/nginx/conf.d:ro
+      - ./docker/log/nginx:/var/log/nginx:rw
+      - ./public:/var/www/app/public:delegated
+    ports:
+      - '80:80'
+    depends_on:
+      - php
+  php:
+    container_name: 'hcap-php'
+    image: registry.gitlab.com/rosatom/core/docker/php
+    working_dir: /var/www/app/
+    environment:
+      - PHP_IDE_CONFIG=serverName=hcap.loc
+      - XDEBUG_CONFIG=remote_enable=true remote_host=host.docker.internal
+    volumes:
+      - .:/var/www/app:delegated
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+    # - ./docker/php/without-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+    #extra_hosts: ['host.docker.internal:172.17.0.1'] # for Linux hosts
+  horizon:
+    container_name: 'hcap-horizon'
+    image: registry.gitlab.com/rosatom/core/docker/php
+    user: '1000:1000'
+    working_dir: /var/www/app
+    environment:
+      - PHP_IDE_CONFIG=serverName=hcap.loc
+      - XDEBUG_CONFIG=remote_enable=true remote_host=host.docker.internal
+    entrypoint: 'php artisan horizon'
+    volumes:
+      - .:/var/www/app:delegated
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+    # - ./docker/php/without-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+    #extra_hosts: ['host.docker.internal:172.17.0.1'] # for Linux hosts
+  postgresql:
+    container_name: 'hcap-postgres'
+    image: registry.gitlab.com/rosatom/core/docker/postgres
+    ports:
+      - '5432:5432'
+    environment:
+      - DEBUG=false
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=hcap_app
+    volumes:
+      #- ./storage/postgresql-data:/var/lib/postgresql
+      - postgresql-data:/var/lib/postgresql
+  redis:
+    container_name: 'hcap-redis'
+    image: redis:alpine
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis-data:/data
+
+  elasticsearch:
+    container_name: "hcap-elasticsearch"
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.13.2
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    environment:
+      - discovery.type=single-node
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9100:9100"
+      - "9200:9200"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
