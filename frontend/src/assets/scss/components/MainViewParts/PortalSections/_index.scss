@@ -1,0 +1,44 @@
+.portal-sections {
+
+  &__item {
+    height: 456px;
+
+    display: block;
+
+    background-size: 80% auto, cover;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+
+    padding: 24px;
+    border-radius: 16px;
+
+    &--kids {
+      background-image: url(~@/assets/img/kids.png), var(--gradient-green);
+    }
+
+    &--entrants {
+      background-image: url(~@/assets/img/entrants.png), var(--gradient-orange);
+    }
+
+    &--adults {
+      background-image: url(~@/assets/img/adults.png), var(--gradient-blue);
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 32px;
+    color: #142202;
+
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #142202;
+    opacity: 0.72;
+  }
+}

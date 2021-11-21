@@ -1,0 +1,38 @@
+:root {
+  --main-color: #3d75e4;
+  --main-color-dark: #04153E;
+  --main-color-light: #091F52;
+  --main-color-lightest: #214EB0;
+
+  --main-color-trans-light: rgba(61, 117, 228, .08);
+
+  --main-color-dark-trans-light: rgba(4, 21, 62, .32);
+  --main-color-dark-trans-middle: rgba(4, 21, 62, .56);
+  --main-color-dark-trans-hard: rgba(4, 21, 62, .72);
+
+  --color-rush: #F6F9FE;
+  --color-lebowski: #D06E0B;
+  --color-alien: #81ABEE;
+
+  --gradient-green: linear-gradient(34.29deg, #E3F3D8 0%, #F6FCF3 100%);
+  --gradient-orange: linear-gradient(34.29deg, #FBECDD 0%, #FEFAF6 100%);
+  --gradient-blue: linear-gradient(34.29deg, #E4EDFB 0%, #F6F9FE 100%);
+  --gradient-red: linear-gradient(53.01deg, #FBE9EC 0%, #FEF8F9 100%);
+  --gradient-violet: linear-gradient(34.29deg, #EFE8FC 0%, #F9F6FE 100%);
+
+  --error-bg: rgba(225, 71, 97, .08);
+  --error-text: #34040F;
+
+  --light-color: #FFFFFF;
+
+  --black: #222222;
+
+  //tmp colors for ui date-picker
+  --rir-rocky: rgb(80, 133, 241);
+  --rir-amelie:  #fff;
+  --rir-component-date-picker-other-month: rgba(9, 33, 82, 0.16);
+  --rir-component-input-background: var(--main-color-trans-light);
+  --rir-component-input-placeholder: var(--main-color-dark-trans-hard);
+  --rir-matrix: rgb(89, 152, 27);
+  --rir-inception: #CDD3DF;
+}

@@ -1,0 +1,38 @@
+.employee {
+  line-height: 1;
+  position: relative;
+
+  &__avatar {
+    width: 112px;
+    height: 112px;
+    position: relative;
+
+    display: inline-block;
+
+    border-radius: 50%;
+    margin-bottom: 18px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__name {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 4px;
+    color: rgba(4, 21, 62, 1);
+  }
+  &__position {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(4, 21, 62, 0.48);
+
+    &--not_published {
+      color: var(--color-lebowski);
+    }
+  }
+}

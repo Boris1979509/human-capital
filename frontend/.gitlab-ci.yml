@@ -1,0 +1,25 @@
+variables:
+  GIT_STRATEGY: clone
+
+stages:
+  - develop
+  - production
+
+before_script:
+  - mkdir ~/.ssh && chmod 700 ~/.ssh
+  - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+  - eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa
+
+deploy_develop:
+  stage: develop
+  script:
+    - ssh -o StrictHostKeyChecking=no deployer@hcap.d.rusatom.dev 'cd /var/www/hcap.d.rusatom.dev && git reset --hard && git pull && yarn && yarn build'
+  only:
+    - develop
+
+deploy_production:
+  stage: production
+  script:
+    - ssh -o StrictHostKeyChecking=no deployer@hcap.rusatom.dev 'cd /var/www/hcap.rusatom.dev && git reset --hard && git pull && yarn && yarn build'
+  only:
+    - master

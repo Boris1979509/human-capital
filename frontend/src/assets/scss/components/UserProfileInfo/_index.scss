@@ -1,0 +1,88 @@
+.user {
+  display: flex;
+  align-items: flex-start;
+
+  margin-bottom: 50px;
+
+  h1.title {
+    margin-bottom: 10px;
+  }
+
+  &__position {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--main-color-dark);
+    opacity: 0.72;
+
+    margin-bottom: 16px;
+  }
+
+  &__progress {
+    display: flex;
+    align-items: center;
+
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--main-color);
+
+    .rir-tooltip {
+      margin-left: 4px;
+    }
+  }
+}
+
+.avatar {
+  width: 84px;
+  height: 84px;
+
+  flex-shrink: 0;
+
+  margin-right: 18px;
+
+  img {
+    display: block;
+
+    width: 72px;
+    height: 72px;
+
+    border: none;
+
+    border-radius: 50%;
+  }
+}
+
+.avatar-modal {
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__upload-btn {
+    position: relative;
+  }
+
+  &__save-btn {
+    margin-top: 32px;
+  }
+
+  .modal__close {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    svg {
+      width: 16px;
+      height: 16px;
+
+      path {
+        fill: var(--main-color);
+      }
+    }
+  }
+}
+
+

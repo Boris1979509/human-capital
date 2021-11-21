@@ -1,0 +1,74 @@
+.tags-cloud {
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    .input-group {
+      flex: 1;
+      flex-shrink: 0;
+    }
+
+    .btn {
+      width: 40px;
+      flex-shrink: 0;
+      margin-left: 16px;
+
+      svg {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+.tag {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: auto;
+
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #fff;
+
+  background: #81ABEE;
+  border-radius: 16px;
+
+  padding: 4px 12px;
+  margin-bottom: 8px;
+  margin-right: 8px;
+
+  transition: ease .5s;
+
+  &__delete {
+    position: absolute;
+    right: 6px;
+    top: 4px;
+
+    height: auto;
+    width: 0px;
+
+    padding: 4px;
+
+    transition: ease .5s;
+  }
+
+  &:hover {
+    padding: 4px 25px 4px 12px;
+
+    .tag__delete {
+      width: 16px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.organization-card {
+  display: flex;
+  flex-direction: column;
+
+  background: var(--color-rush);
+  border-radius: 16px;
+  padding: 20px;
+
+  margin-top: 32px;
+  height: 229px;
+  max-width: 212px;
+  &__avatar{
+    min-height: 57px;
+    height: 57px;
+    width: 57px;
+
+    margin-bottom: 16px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  &__name{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 4px;
+  }
+  &__type{
+    font-style: normal;
+    font-weight: normal;
+    height: 48px;
+    font-size: 13px;
+    line-height: 16px;
+    opacity: 0.72;
+    margin-bottom: 20px;
+  }
+  &__curricula_count{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--main-color);
+  }
+  &:hover {
+    box-shadow: 0 9px 28px rgba(17, 48, 121, 0.18);
+  }
+}

@@ -1,0 +1,293 @@
+@import "reset";
+@import "utilities";
+@import "views";
+@import "components";
+
+html, body, #app {
+  height: 100%;
+  width: 100%;
+  background-color: var(--light-color);
+}
+
+a {
+  color: var(--main-color-dark);
+}
+
+.title {
+  margin: 0;
+
+  @at-root h1#{&} {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 44px;
+  }
+  @at-root h2#{&} {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 36px;
+  }
+  @at-root h3#{&} {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 32px;
+  }
+  @at-root h4#{&} {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  @at-root h5#{&} {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  @at-root h6#{&} {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+#icon-sprite {
+  width: 0;
+  height: 0;
+  position: fixed;
+  visibility: hidden;
+}
+
+.icon {
+  fill: none;
+}
+
+.loading-container {
+  width: 100%;
+  min-height: 455px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  height: 100%;
+
+  padding-top: 24px;
+  padding-bottom: 88px;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  // justify-content: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-right: 16px;
+  padding-left: 16px;
+
+  .profile {
+    width: 66%;
+    margin: 0 auto;
+  }
+
+  &.wide_layout {
+    .profile {
+      width: 100%;
+      .wrapper_user_tabs {
+        display: inline-block;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        min-width: 66%;
+      }
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0 -16px;
+}
+
+.col-16 {
+  width: 100%;
+  min-height: 1px;
+
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+
+  padding: 0 16px;
+}
+
+.col-25 {
+  width: 100%;
+  min-height: 1px;
+
+  flex: 0 0 25%;
+  max-width: 25%;
+
+  padding: 0 16px;
+
+  &--center {
+    padding-top: 12px;
+  }
+}
+
+.col-33 {
+  width: 100%;
+  min-height: 1px;
+
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+
+  padding: 0 16px;
+
+  &--center {
+    padding-top: 12px;
+  }
+}
+
+.col-41 {
+  width: 100%;
+  min-height: 1px;
+
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+
+  padding: 0 16px;
+}
+
+.col-50 {
+  width: 100%;
+  min-height: 1px;
+
+  flex: 0 0 50%;
+  max-width: 50%;
+
+  padding: 0 16px;
+
+  &--center {
+    padding-top: 12px;
+  }
+}
+
+.col-58 {
+  width: 100%;
+  min-height: 1px;
+
+  flex: 0 0 58.333333%;
+  max-width: 58.333333%;
+
+  padding: 0 16px;
+}
+
+.col-66 {
+  width: 100%;
+  min-height: 1px;
+
+  flex: 0 0 66.666667%;;
+  max-width: 66.666667%;;
+
+  padding: 0 16px;
+}
+
+.col-100 {
+  width: 100%;
+  min-height: 1px;
+
+  flex: 0 0 100%;
+  max-width: 100%;
+
+  padding: 0 16px;
+
+  &--center {
+    padding-top: 12px;
+  }
+}
+
+.bg {
+
+  &--violet {
+    background: var(--gradient-violet);
+  }
+
+  &--orange {
+    background: var(--gradient-orange);
+  }
+
+  &--blue {
+    background: var(--gradient-blue);
+  }
+
+  &--green {
+    background: var(--gradient-green);
+  }
+
+  &--red {
+    background: var(--gradient-red);
+  }
+}
+
+.spinner {
+  display: inline-block;
+
+  width: 16px;
+  height: 16px;
+
+  border: 3px solid #fff;
+  border-right-color: transparent;
+  border-radius: 50%;
+
+  -webkit-animation: spinner .75s linear infinite;
+  animation: spinner .75s linear infinite;
+
+  margin-left: 10px;
+
+  &--dark {
+    width: 48px;
+    height: 48px;
+
+    border: 3px solid var(--main-color-dark-trans-hard);
+    border-right-color: transparent;
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-page {
+  width: 100%;
+
+  h1.title,
+  h2.title {
+    margin-bottom: 16px;
+  }
+}
+
+
+// .rir-popover{
+//   position: relative;
+//   &__activator{}
+//   &__content{
+//     background-color: var(--main-color-dark);
+//     display: inline-flex;
+//     position: absolute;
+//     box-shadow: 0 8px 24px rgba(19, 57, 134, 0.16);
+//     z-index: 10000;
+//   }
+// }
+
+

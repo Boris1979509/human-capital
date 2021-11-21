@@ -1,0 +1,127 @@
+.range-container {
+  display: flex;
+  align-items: center;
+
+  height: 40px;
+  width: 100%;
+
+  background-color: var(--main-color-trans-light);
+  border-radius: 8px;
+  padding: 2px 16px;
+
+  &__label {
+    flex-shrink: 0;
+
+    padding-right: 16px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--main-color-dark-trans-middle);
+  }
+
+  &__value {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--main-color-dark-trans-hard);
+  }
+
+  input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    background-color: #C0D6F6;
+    border-radius: 4px;
+  }
+
+  input[type=range]:focus {
+    outline: none;
+  }
+
+  //input[type=range]::-ms-track {
+  //  width: 100%;
+  //  cursor: pointer;
+  //  background: transparent;
+  //  border-color: transparent;
+  //  color: transparent;
+  //}
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04IDE2QzEyLjQxODMgMTYgMTYgMTIuNDE4MyAxNiA4QzE2IDMuNTgxNzIgMTIuNDE4MyAwIDggMEMzLjU4MTcyIDAgMCAzLjU4MTcyIDAgOEMwIDEyLjQxODMgMy41ODE3MiAxNiA4IDE2WiIgZmlsbD0iIzNENzVFNCIvPgo8ZyBmaWx0ZXI9InVybCgjZmlsdGVyMzIyNDQzMzBfZCkiPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTggMTJDMTAuMjA5MSAxMiAxMiAxMC4yMDkxIDEyIDhDMTIgNS43OTA4NiAxMC4yMDkxIDQgOCA0QzUuNzkwODYgNCA0IDUuNzkwODYgNCA4QzQgMTAuMjA5MSA1Ljc5MDg2IDEyIDggMTJaIiBmaWxsPSJ3aGl0ZSIvPgo8L2c+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIzMjI0NDMzMF9kIiB4PSIyIiB5PSI0IiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIj4KPGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz4KPGZlQ29sb3JNYXRyaXggaW49IlNvdXJjZUFscGhhIiB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMTI3IDAiLz4KPGZlT2Zmc2V0IGR5PSIyIi8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjEiLz4KPGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMC4wOTAxOTYxIDAgMCAwIDAgMC4yMzEzNzMgMCAwIDAgMCAwLjUwOTgwNCAwIDAgMCAwLjY0IDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9IkJhY2tncm91bmRJbWFnZUZpeCIgcmVzdWx0PSJlZmZlY3QxX2Ryb3BTaGFkb3ciLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJlZmZlY3QxX2Ryb3BTaGFkb3ciIHJlc3VsdD0ic2hhcGUiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg==);
+    -webkit-background-size: 16px;
+    background-size: 16px;
+    cursor: pointer;
+
+    //margin-top: -7px;
+  }
+
+  //input[type=range]::-moz-range-thumb {
+  //  height: 16px;
+  //  width: 16px;
+  //  border-radius: 50%;
+  //  background: #3D75E4;
+  //  cursor: pointer;
+  //}
+  //
+  //input[type=range]::-ms-thumb {
+  //  height: 16px;
+  //  width: 16px;
+  //  border-radius: 50%;
+  //  background: #3D75E4;
+  //  cursor: pointer;
+  //}
+
+  //input[type=range]::-webkit-slider-runnable-track {
+  //  width: 100%;
+  //  height: 3px;
+  //  cursor: pointer;
+  //
+  //  background: #C0D6F6;
+  //  border-radius: 1.5px;
+  //}
+  //
+  //input[type=range]:focus::-webkit-slider-runnable-track {
+  //  background: #C0D6F6;
+  //}
+
+  //input[type=range]::-moz-range-track {
+  //  width: 100%;
+  //  height: 3px;
+  //  cursor: pointer;
+  //
+  //  background: #C0D6F6;
+  //  border-radius: 1.5px;
+  //}
+
+  //input[type=range]::-ms-track {
+  //  width: 100%;
+  //  height: 3px;
+  //  cursor: pointer;
+  //
+  //  background: transparent;
+  //  border-color: transparent;
+  //  border-width: 3px 0;
+  //  color: transparent;
+  //}
+  //input[type=range]::-ms-fill-lower {
+  //  background: #C0D6F6;
+  //  border-radius: 1.5px;
+  //}
+  //input[type=range]:focus::-ms-fill-lower {
+  //  background: #C0D6F6;
+  //}
+  //input[type=range]::-ms-fill-upper {
+  //  background: #C0D6F6;
+  //  border-radius: 1.5px;
+  //}
+  //input[type=range]:focus::-ms-fill-upper {
+  //  background: #C0D6F6;
+  //}
+}

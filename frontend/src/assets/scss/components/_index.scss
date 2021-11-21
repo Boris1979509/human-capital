@@ -1,0 +1,45 @@
+@import "InputComponents/TextInput";
+@import "InputComponents/Checkbox";
+@import "InputComponents/Button";
+@import "InputComponents/Select";
+@import "InputComponents/Upload";
+@import "InputComponents/TagsCloud";
+@import "InputComponents/Radio";
+// @import "InputComponents/Datepicker";
+@import "InputComponents/Wysiwyg";
+@import "InputComponents/Search";
+@import "InputComponents/Range";
+@import "InputComponents/rirDatePicker";
+@import "InputComponents/rirPopover";
+@import "InputComponents/rirIcon";
+@import "InputComponents/rirInput";
+
+@import "Cards/PriceCard";
+@import "Cards/NewsCard";
+@import "Cards/CompilationCard";
+@import "Cards/PersonCard";
+@import "Cards/OrganizationCard";
+@import "Cards/EmployeeCard";
+
+@import "Header";
+@import "Footer";
+@import "Breadcrumbs";
+@import "Tabs";
+@import "UserProfileInfo";
+@import "CircleProgress";
+@import "Rating";
+@import "Tooltip";
+
+@import "MainViewParts/HeadSection";
+@import "MainViewParts/PortalSections";
+@import "MainViewParts/EducationCatalog";
+@import "MainViewParts/ProfessionsCatalog";
+@import "MainViewParts/Compilations";
+@import "MainViewParts/JournalCatalog";
+@import "MainViewParts/PopularEduPrograms";
+
+@import "OrganizationsParts/HeadSection";
+@import "OrganizationsParts/Counters";
+@import "OrganizationsParts/Filters";
+
+

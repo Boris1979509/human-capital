@@ -1,0 +1,111 @@
+.institution-page {
+
+  h1.institution-page__title {
+    margin-bottom: 16px;
+  }
+
+  h2.institution-page__title {
+    margin-bottom: 32px !important;
+  }
+
+  &__type {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--main-color-dark-trans-middle);
+
+    margin-bottom: 32px;
+  }
+
+  &__avatar {
+    height: 56px;
+
+    margin-bottom: 32px;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__desc {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--main-color-light);
+  }
+
+  .map {
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.info-list {
+  margin-top: 42px;
+
+  &__item {
+    margin-bottom: 24px;
+  }
+
+  &__item-number {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--main-color);
+  }
+
+  &__item-description {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--main-color-light);
+  }
+}
+
+.contact {
+  margin-bottom: 24px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    svg {
+      flex-shrink: 0;
+
+      margin-right: 8px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  h5.contact__title.title {
+    margin-bottom: 18px;
+  }
+
+  &__label {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--main-color-dark-trans-middle);
+
+    margin-bottom: 8px;
+  }
+
+  &__website {
+    margin-top: 32px;
+  }
+
+  &__link {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--main-color-dark);
+    border-bottom: 2px solid #81ABEE;
+  }
+}

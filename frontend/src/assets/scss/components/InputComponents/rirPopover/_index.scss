@@ -1,0 +1,11 @@
+.rir-popover{
+  position: relative;
+  &__activator{}
+  &__content{
+    background-color: var(--rir-amelie);
+    display: inline-flex;
+    position: absolute;
+    box-shadow: 0 8px 24px rgba(19, 57, 134, 0.16);
+    z-index: 10000;
+  }
+}

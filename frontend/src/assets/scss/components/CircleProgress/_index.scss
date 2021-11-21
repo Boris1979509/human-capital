@@ -1,0 +1,20 @@
+.progress {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  transform: rotate(-90deg);
+
+  z-index: 9;
+
+  &__value {
+    fill: none;
+  }
+
+  &__value {
+    stroke: var(--main-color);
+    stroke-linecap: round;
+  }
+}

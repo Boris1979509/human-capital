@@ -1,0 +1,28 @@
+.organizations-counters {
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+
+  &__item {
+    padding-left: 25px;
+    max-width: 150px;
+
+    &__count {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 44px;
+      color: var(--main-color);
+      margin-bottom: 4px;
+    }
+
+    &__name {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 16px;
+      color: var(--main-color-dark);
+      opacity: 0.64;
+    }
+  }
+}

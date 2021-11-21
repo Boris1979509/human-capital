@@ -1,0 +1,103 @@
+.rir-input{
+  background-color: var(--rir-component-input-background);
+  border-radius: 8px;
+  padding: 0 16px;
+  cursor: text;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  &.readonly{
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+    opacity: .72;
+  }
+  &:hover {
+    & label{
+      // добавить переменую для ховера
+    }
+  }
+  &__body{
+    position: relative;
+    padding: 18px 0 4px;
+    flex: 1 1 auto;
+    order: 2;
+    &:not(.not-label) {
+      padding: 8px 0 12px;
+    }
+  }
+  &__input{
+    position: relative;
+    height: 20px;
+    & > input {
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      height: 100%;
+      width: 100%;
+      outline:none;
+      background-color: transparent;
+      &[type="time"]::-webkit-calendar-picker-indicator {
+        background: none;
+        display: none;
+      }
+      &:disabled{
+        cursor: inherit;
+      }
+      &:focus{
+        & + label{
+          font-weight: normal;
+          font-size: 13px;
+          line-height: 16px;
+          transform:translateY(-14px)
+        }
+      }
+      &::placeholder{
+        color: var(--rir-component-input-placeholder);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+  &__label{
+    cursor: text;
+    white-space: nowrap;
+    position: absolute;
+    z-index: 2;
+    color: var(--rir-component-input-placeholder) !important;
+    left: 0;
+    top: 0;
+    transition: transform 100ms ease, font-size 100ms;
+    transform: translateY(-14px);
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    &:not(.active){
+      font-size: 16px;
+      line-height: 20px;
+      transform: translateY(-6px);
+    }
+  }
+  &__before,
+  &__after{
+    display: flex;
+    align-items: center;
+  }
+  &__before{
+    order: 1;
+    margin-right: 8px;
+  }
+  &__after {
+    order: 3;
+    margin-left: 8px;
+    .rir-select__icon {
+      height: 20px;
+    }
+  }
+}

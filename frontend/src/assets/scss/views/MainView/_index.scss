@@ -1,0 +1,23 @@
+.page {
+  width: 100%;
+
+  padding: 48px 0;
+
+  h1.title {
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    color: #04153E;
+    opacity: 0.72;
+
+    margin-bottom: 40px;
+  }
+
+  &__section {
+    margin-bottom: 72px;
+  }
+}

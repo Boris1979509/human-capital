@@ -1,0 +1,190 @@
+.rir-date-picker{
+  * {
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--rir-inception);
+      border-radius: 4px;
+    }
+  }
+  display: inline-flex;
+  flex-direction: column;
+  width: 240px;
+  &__navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    & > i {
+      cursor: pointer;
+      &:first-child{
+        margin-right: 16px;
+        transform: rotate(180deg);
+      }
+      &:last-child{
+        margin-left: 16px;
+      }
+    }
+  }
+  &__title{
+    flex: 1 1 auto;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--rir-gladiator);
+    text-align: center;
+    user-select: none;
+  }
+  &__week{
+    display: grid;
+    grid-template-columns: repeat(7, 24px);
+    grid-template-rows: 24px;
+    grid-gap: 4px 12px;
+  }
+  &__day{
+    color: var(--rir-rocky);
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    &:last-child,
+    &:nth-last-child(2){
+      color: var(--rir-fargo);
+    }
+  }
+  &__row{
+    display: grid;
+    grid-template-columns: repeat(7, 24px);
+    grid-template-rows: 24px;
+    grid-gap: 4px 12px;
+  }
+  &__column{
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--rir-gladiator);
+    cursor: pointer;
+    user-select: none;
+    border-radius: 4px;
+    &:hover{
+      background-color: var(--rir-component-date-picker-date-hover);
+    }
+    &.otherMonth{
+      color: var(--rir-component-date-picker-other-month);
+      &:hover{
+        color: var(--rir-gladiator);
+        background-color: var(--rir-component-date-picker-date-hover);
+      }
+    }
+    &.active{
+      color: var(--rir-amelie);
+      background: var(--rir-rocky);
+      &.period{
+        opacity: 0.72;
+        &:not(.start),
+        &:not(.finish){
+          border-radius: 0;
+        }
+        position: relative;
+        &:after{
+          content: '';
+          position: absolute;
+          width: 12px;
+          background-color: inherit;
+          height: 24px;
+          left: calc(100% + 1px);
+        }
+        &:last-child{
+          &:after{
+            content: none;
+          }
+        }
+      }
+      &.start,
+      &.finish {
+        opacity: 1;
+        &:after{
+          opacity: 0.72;
+        }
+      }
+      &.finish{
+        &:after{
+          content: none;
+        }
+      }
+      &.start:not(.finish) {
+        border-radius: 4px 0 0 4px;
+      }
+      &.finish:not(.start) {
+        border-radius: 0 4px 4px 0;
+      }
+      &:hover{
+        border-color: var(--rir-gladiator);
+      }
+    }
+    &.block{
+      color: var(--rir-component-date-picker-other-month);
+      cursor: default;
+      pointer-events: none;
+    }
+    &.nowDate{
+      border-color: var(--rir-rocky);
+    }
+  }
+  &__input{
+    cursor: pointer!important;
+    &.period{
+      opacity: 1!important;
+      & > .rir-input__after {
+        pointer-events: auto!important;
+      }
+    }
+  }
+  &__content {
+    min-width: 288px;
+    border-radius: 16px;
+    padding: 24px;
+    height: 244px;
+    overflow: hidden;
+  }
+  &__time{
+    display: flex;
+    height: 100%;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      overflow: auto;
+      & > span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        height: 24px;
+        &.active{
+          background-color: rgba(61,117,228,.08);
+        }
+      }
+    }
+  }
+  &__clock{
+    flex: 0 0 auto;
+    margin-right: 8px;
+  }
+}
