@@ -1,0 +1,45 @@
+.share {
+  margin-top: 12px;
+}
+.share__title {
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  color: #04153E;
+  opacity: 0.48;
+  margin-bottom: 8px;
+}
+.share__soc-net {
+
+}
+.share__soc-net-link {
+  display: inline-block;
+  margin-right: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
+}
+.share__soc-net-link.vk::before {
+  background: url("~@/assets/img/icons/soc-net/vk.svg") no-repeat;
+  background-size: 100%;
+}
+.share__soc-net-link.facebook::before {
+  background: url("~@/assets/img/icons/soc-net/facebook.svg") no-repeat;
+  background-size: 100%;
+}
+.share__soc-net-link.twitter::before {
+  background: url("~@/assets/img/icons/soc-net/twitter.svg") no-repeat;
+  background-size: 100%;
+}

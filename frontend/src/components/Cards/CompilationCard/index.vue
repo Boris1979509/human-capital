@@ -1,6 +1,9 @@
 <template>
   <a @click="$router.push(`/selections/${routeId}`)" :title="title" class="compilation"
      :class="colors[$getRandomColor(colors.length)]">
+
+      <span class="compilation__icon"></span>
+
     <div class="compilation__container">
       <FavoriteCardIndicator v-if="isFavorited" :item-id="routeId"
                              @removedFromFavorites="$emit('removedFromFavorites', $event)"

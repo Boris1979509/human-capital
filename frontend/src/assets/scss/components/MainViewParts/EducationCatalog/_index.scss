@@ -23,9 +23,43 @@
 
   &__item {
     height: 270px;
-
+    background: linear-gradient(53.01deg, #E6EBF5 0%, #F5F8FC 100%);
     border-radius: 16px;
     padding: 20px;
+    position: relative;
+    margin-bottom: 40px;
+
+    &::before {
+      content: "";
+      width: 90px;
+      height: 16px;
+      position: absolute;
+      top: 0;
+      left: 16px;
+      transform: translateY(-100%);
+      display: block;
+    }
+
+    &.bg_violet::before {
+      background: url(~@/assets/img/icons/fiolet.jpg) no-repeat;
+      background-size: 100%;
+    }
+    &.bg_orange::before {
+      background: url(~@/assets/img/icons/orange.jpg) no-repeat;
+      background-size: 100%;
+    }
+    &.bg_blue::before {
+      background: url(~@/assets/img/icons/blue.jpg) no-repeat;
+      background-size: 100%;
+    }
+    &.bg_green::before {
+      background: url(~@/assets/img/icons/green.jpg) no-repeat;
+      background-size: 100%;
+    }
+    &.bg_red::before {
+      background: url(~@/assets/img/icons/fiolet.jpg) no-repeat;
+      background-size: 100%;
+    }
 
     &--wide {
       display: flex;

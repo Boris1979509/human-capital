@@ -22,7 +22,7 @@
     font-size: 10px;
     line-height: 12px;
     color: var(--light-color);
-
+    text-decoration: none;
     border-bottom: 2px solid #214EB0;
   }
 
@@ -105,4 +105,8 @@
       margin-right: 0;
     }
   }
+}
+
+.footer__logo-img {
+  margin-right: 8px;
 }

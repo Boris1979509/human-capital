@@ -3,7 +3,8 @@
 
   display: block;
 
-  height: 184px;
+  height: 240px;
+  margin-bottom: 20px;
 
 
   border-radius: 16px;
@@ -99,4 +100,16 @@
       background: #C7E6A8;
     }
   }
+}
+
+.compilation__icon {
+  position: absolute;
+  top: 23px;
+  right: 32px;
+  z-index: 9;
+  background: url(~@/assets/img/icons/0.svg) no-repeat;
+  background-size: 100%;
+  width: 16px;
+  height: 16px;
+  display: block;
 }

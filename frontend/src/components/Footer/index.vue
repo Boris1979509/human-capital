@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer__container">
       <div class="row">
-        <div class="col-33">
+        <div class="col-20">
           <div class="footer__logo">
             <svg width="41" height="48" viewBox="0 0 41 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M4.55823 44.6743L16.0222 44.6743C16.6752 44.6979 17.2949 44.8398 17.8576 45.0838C19.1741 45.5396 20.1869 46.64 20.5018 47.9973C20.8195 46.6275 21.8482 45.5191 23.1824 45.0713C23.7396 44.8339 24.3511 44.696 24.9927 44.6743L36.4454 44.6743C38.4109 44.625 40.2304 43.3479 40.6864 41.4104C40.662 41.3998 40.626 41.3844 40.5722 41.3633C38.8316 40.5861 36.0348 40.1524 35.4948 40.0825L32.0628 40.0619L9.29291 39.4492L3.81218 40.341L2.94363 40.6719C2.57812 40.7698 1.16363 41.0252 0.308594 41.3741C0.771728 43.3445 2.54551 44.6238 4.55823 44.6743Z" fill="#00A849"/>
@@ -110,7 +110,29 @@
           </div>
         </div>
 
-        <div class="col-16">
+          <div class="col-20">
+              <div class="footer__logo">
+                  <img src="~@/assets/img/logo/logo2.png" alt="Департамент образования Белгородской области" class="footer__logo-img">
+
+
+                  <div class="footer__logo-container">
+                      <div class="footer__logo-text">
+                          Департамент <br> образования <br> Белгородской области
+                      </div>
+
+                      <a href="tel:+74722336466" title="+7 831 467-10-01" class="footer__contact">
+                          +7 4722 33-64-66
+                      </a>
+
+                      <a href="mailto:dobo@belregion.ru" title="dobo@belregion.ru" class="footer__link">
+                          dobo@belregion.ru
+                      </a>
+                  </div>
+
+              </div>
+          </div>
+
+        <div class="col-20">
           <nav class="footer__links">
             <router-link :to="item.link" class="footer__nav-link" v-for="(item, key) in portalSections" :key="key">
               {{ item.text }}
@@ -118,7 +140,7 @@
           </nav>
         </div>
 
-        <div class="col-25">
+        <div class="col-20">
           <nav class="footer__links">
             <router-link :to="item.link" class="footer__nav-link" v-for="(item, key) in mainSections" :key="key">
               {{ item.text }}
@@ -126,7 +148,7 @@
           </nav>
         </div>
 
-        <div class="col-25">
+        <div class="col-20">
           <div class="footer__logo-title">
             Разработчик
           </div>

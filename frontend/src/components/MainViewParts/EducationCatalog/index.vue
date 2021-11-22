@@ -35,7 +35,7 @@ export default {
   data: function() {
     return {
       summary: [],
-      colors: ['bg--violet', 'bg--orange', 'bg--blue', 'bg--green', 'bg--red'],
+      colors: ['bg_violet', 'bg_orange', 'bg_blue', 'bg_green', 'bg_red'],
       programsFetched: false,
     };
   },

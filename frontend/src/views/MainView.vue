@@ -4,26 +4,48 @@
       <HeadSection :region="regionName" :counters="regionCounters"/>
     </section>
 
+    <ProfessionsCatalog/>
+
+      <section class="page__section">
+          <router-link to="/institutions">
+              <h1 class="title">
+                  Каталог образования
+                  <Icon xlink="link_arrow_big"
+                        viewport="0 0 12 24"/>
+              </h1>
+          </router-link>
+
+          <div class="page__description">
+              Найдите образовательную программу для любого<br/> возраста и уровня подготовки
+          </div>
+
+          <EducationCatalog/>
+      </section>
+
+      <section class="page__section">
+          <router-link to="/selections">
+              <h1 class="title">
+                  Подборки
+                  <Icon xlink="link_arrow_big"
+                        viewport="0 0 12 24"/>
+              </h1>
+          </router-link>
+
+          <div class="page__description">
+              Лучшие материалы, отобранные с учетом ваших<br/> персональных предпочтений
+          </div>
+
+          <Compilations/>
+      </section>
+
+
+      <!-- Этого блока вообще нет в дизайне на главной странице
     <section class="page__section">
       <PortalSections/>
     </section>
+    -->
 
-    <section class="page__section">
-      <router-link to="/selections">
-        <h1 class="title">
-          Подборки
-          <Icon xlink="link_arrow_big"
-                viewport="0 0 12 24"/>
-        </h1>
-      </router-link>
-
-      <div class="page__description">
-        Лучшие материалы, отобранные с учетом ваших<br/> персональных предпочтений
-      </div>
-
-      <Compilations/>
-    </section>
-
+      <!-- И этого блока тоже нет в дизайне на главной
     <section class="page__section">
       <router-link to="/">
         <h1 class="title">
@@ -39,23 +61,12 @@
 
       <ProfessionsCatalog/>
     </section>
+    -->
 
-    <section class="page__section">
-      <router-link to="/institutions">
-        <h1 class="title">
-          Каталог образования
-          <Icon xlink="link_arrow_big"
-                viewport="0 0 12 24"/>
-        </h1>
-      </router-link>
 
-      <div class="page__description">
-        Найдите образовательную программу для любого<br/> возраста и уровня подготовки
-      </div>
+      <!-- тут был каталог образования -->
 
-      <EducationCatalog/>
-    </section>
-
+      <!-- И этого блока тоже нет в дизайне на главной
     <section class="page__section">
       <router-link to="/">
         <h1 class="title">
@@ -71,6 +82,7 @@
 
       <Opinions />
     </section>
+    -->
 
     <section class="page__section">
       <router-link to="/journal">
