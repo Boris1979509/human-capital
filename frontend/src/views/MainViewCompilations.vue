@@ -10,39 +10,67 @@
         собрали их в одном месте
       </p>
     </div>
-    <div class="compilation__list">
-      <div
-        class="compilation__item"
-        v-for="(item, idx) in compilations"
-        :key="idx"
-        @click="
+
+      <div class="row">
+
+          <div
+              class="col-33"
+              v-for="(item, idx) in compilations"
+              :key="idx"
+              @click="
           $router.push({
             'name': 'MainViewCompilationsItem',
             'params': {
               'id': item.id,
             },
           })
-        "
-        :style="`box-shadow: 4px 0px 0px 0px ${getRandomColor()}`"
-      >
-        <div class="compilation__item__title">
-          {{ item.title }}
-        </div>
-        <div class="compilation__item__description">
-          {{ item.annotation }}
-        </div>
+        "> <!--:style="`box-shadow: 4px 0px 0px 0px ${getRandomColor()}`"-->
+              <a title="Космическая подборка" class="compilation compilation--red" :class="colors[$getRandomColor(colors.length)]">
+                  <span class="compilation__icon"></span>
+                  <div class="compilation__container"><!---->
+                      <div class="compilation__title">{{ item.title }}</div>
+                      <div class="compilation__description">
+                          {{ item.annotation }}
+                      </div>
+                  </div>
+              </a>
+          </div>
+
+          <div class="col-33">
+
+              <a title="Космическая подборка" class="compilation compilation--red"> <!-- compilation_with_img если картинка есть на фоне -->
+                  <span class="compilation__icon"></span>
+                  <div class="compilation__container"><!-- если есть картинка добавлять инлайново style="background: url('/assets/img/test/0.png') no-repeat" -->
+                      <div class="compilation__title">Тик-ток или завод: варианты карьеры</div>
+                      <div class="compilation__description">
+                          Пусто
+                      </div>
+                  </div>
+              </a>
+
+          </div>
+
+          <div class="col-33">
+            <PredictionCard/>
+          </div>
+
       </div>
-    </div>
+
+
   </div>
 </template>
 
 <script>
+
+import PredictionCard from '@/components/Cards/PredictionCard'
+
 export default {
   name: 'MainViewCompilations',
   data() {
     return {
       compilations: [],
       randomColors: ['#F8D6B5', '#C0D6F6', '#F7CFD5', '#C7E6A8'],
+      colors: ['compilation--orange', 'compilation--blue', 'compilation--red', 'compilation--green'],
       // prevColor: randomColors[0],
     };
   },
@@ -71,16 +99,28 @@ export default {
       return this.randomColors[Math.round(Math.random() * 3)];
     },
   },
+
+    components: {
+        PredictionCard
+    }
 };
 </script>
 
 <style lang="scss" scoped>
 .compilation__wrapper {
   width: 100%;
+    .col-33 {
+        cursor: pointer;
+    }
   .mb-26 {
     margin-bottom: 26px;
   }
+    .compilation__container {
+        //background: url("~@/assets/img/test/0.png") no-repeat;
+        //background-size: 100%;
+    }
   .compilation {
+
     &__title {
       max-height: max-content;
       margin-bottom: 40px;

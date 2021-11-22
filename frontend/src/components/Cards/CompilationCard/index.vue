@@ -51,6 +51,6 @@ export default {
 </script>
 <style>
 .compilation {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 </style>
