@@ -10,9 +10,11 @@
           Профессии
         </router-link>
 
+          <!--
         <router-link to="/" class="header__nav-link">
           Мнения
         </router-link>
+        -->
 
         <router-link to="/institutions" class="header__nav-link">
           Каталог образования

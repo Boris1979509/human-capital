@@ -9,6 +9,8 @@
   margin-top: 32px;
   height: 229px;
   max-width: 212px;
+  position: relative;
+
   &__avatar{
     min-height: 57px;
     height: 57px;
@@ -27,6 +29,7 @@
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 4px;
+    word-break: break-all;
   }
   &__type{
     font-style: normal;
@@ -46,5 +49,17 @@
   }
   &:hover {
     box-shadow: 0 9px 28px rgba(17, 48, 121, 0.18);
+  }
+
+  &::before {
+    content: "";
+    background: url("~@/assets/img/icons/1.svg") no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 }

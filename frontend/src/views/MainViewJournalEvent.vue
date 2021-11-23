@@ -426,6 +426,9 @@ export default {
           }
         }
       }
+        .news_item_content-text {
+            margin-top: 40px;
+         }
 
       .news_item_theme {
         .theme_label {

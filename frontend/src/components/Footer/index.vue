@@ -176,37 +176,40 @@ export default {
     return {
       portalSections: [
         {
-          link: '#',
+          link: '/kids',
           text: 'Детям',
         },
         {
-          link: '#',
+          link: '/entrants',
           text: 'Абитуриентам',
         },
         {
-          link: '#',
+          link: '/adults',
           text: 'Взрослым',
         },
       ],
       mainSections: [
         {
-          link: '#',
+          link: '/',
           text: 'Профессии',
         },
         {
-          link: '#',
+          link: '/institutions',
           text: 'Каталог образования',
         },
+          /*
         {
           link: '#',
           text: 'Мнения',
         },
+
+           */
         {
-          link: '#',
+          link: '/journal',
           text: 'Журнал',
         },
         {
-          link: '#',
+          link: '/job/employers',
           text: 'Работодатели',
         },
       ],
